@@ -6,3 +6,11 @@ gradio
 mdtex2html
 sentencepiece
 accelerate
+fastapi
+reids
+hiredis>=1.0
+timm
+uvicorn
+numpy
+scipy
+Pillow
