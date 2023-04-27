@@ -28,6 +28,17 @@ ChatGLM-6B 使用了和 ChatGPT 相似的技术，针对中文问答和对话进
 ### 环境安装
 python环境为3.8.10，需要确认**cuda版本**，尽可能使用cuda 11.6版本
 
+pytorch的安装使用如下命令：
+```bash
+# CUDA 11.6
+pip install torch==1.12.1+cu116 torchvision==0.13.1+cu116 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu116
+# CUDA 11.3
+pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu113
+# CUDA 10.2
+pip install torch==1.12.1+cu102 torchvision==0.13.1+cu102 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu102
+```
+目前torch官方只支持CUDA 11.6、11.3和10.2三个版本。需要确定本机的CUDA版本，如果不符合，需要另行调整
+
 使用 pip 安装依赖：`pip install -r requirements.txt`，其中 `transformers` 库版本推荐为 `4.27.1`，但理论上不低于 `4.23.1` 即可。
 
 ### 代码调用 
